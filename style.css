@@ -1,0 +1,35 @@
+.desktop-btn {
+    display: block;
+}
+
+h2.title-section::after {
+    content: "";
+    width: 200px;
+    height: 4px;
+    background-color: #C7B299;
+    display: block;
+    margin: 10px 0px;
+}
+
+html,body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.mobile-btn {
+    display: none;
+}
+
+@media screen and (max-width:789px) {
+    .mobile {
+        display: none ;
+    }
+
+    .desktop-btn {
+        display: none;
+    }
+
+    .mobile-btn {
+        display: block;
+    }
+}

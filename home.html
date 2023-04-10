@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
@@ -11,7 +12,7 @@
             font-family: font1;
             src: url(Font/source_sans/SourceSansPro-Regular.ttf);
         }
-        nav{
+        nav, konten{
             font-family: font1;
         }
         .dropdown:hover > .dropdown-menu, .dropdown-submenu:hover > .dropdown-menu{
@@ -149,27 +150,60 @@
     </nav>
 
     <konten>
-        <div class="container-fluid px-0 py-0">
-            <div class="row">
-                <img class="d-flex" src="asset/selamat-datang.png" alt="">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="asset/selamat-datang.png" class="w-100 d-block" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>SELAMAT DATANG</h5>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="holder.js/900x500/auto/#666:#444/text:Second slide" class="w-100 d-block" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Title</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="holder.js/900x500/auto/#666:#444/text:Third slide" class="w-100 d-block" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Title</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         <div class="container-fluid">
             <div class="row ms-4">
                 <div class="col-lg-12 col-md-12 mt-4">
-                    <h2>Berita</h2>
-                    <div class="row">
+                    <h2 class="title-section" style="font-weight: bold;">Berita</h2>
+                    <div class="row mt-4">
                         <div class="col-lg-6 col-md-12">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
                                     <img class="d-flex w-100" src="asset/berita-1.jpg" alt="">
                                 </div>
                                 <div class="col-lg-12 col-md-12">
-                                    <p style="margin-bottom: 0%;">
+                                    <p style="margin-bottom: 13px; margin-top: 13px;">
                                         Rabu, 1 Maret 2023
                                     </p>
                                 </div>
-                                <h4>Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h4>
+                                <h4 style="font-weight: bold;">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h4>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <p style="margin-top: 0pt; margin-bottom: 0%;">
@@ -177,7 +211,7 @@
                                 </p>
                             </div>
                             <div class="text mt-0 mb-5">
-                                <a href="#" type="button" style="color: darkgoldenrod;">SELENGKAPNYA ></a>
+                                <a href="#" type="button" style="color: darkgoldenrod; text-decoration: none; font-size: 13px;">SELENGKAPNYA ></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12">
@@ -194,10 +228,10 @@
                                                         Rabu, 1 Maret 2023
                                                     </p>
                                                 </div>
-                                                <h5 class="mb-1">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
+                                                <h5 class="mb-1" style="font-weight: bold;">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="text mt-0 mb-5">
-                                                        <a href="#" type="button" style="color: darkgoldenrod;">SELENGKAPNYA ></a>
+                                                        <a href="#" type="button" style="color: darkgoldenrod; text-decoration: none; font-size: 13px;">SELENGKAPNYA ></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -216,17 +250,18 @@
                                                         Rabu, 1 Maret 2023
                                                     </p>
                                                 </div>
-                                                <h5 class="mb-1">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
+                                                <h5 class="mb-1" style="font-weight: bold;">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="text mt-0 mb-5">
-                                                        <a href="#" type="button" style="color: darkgoldenrod;">SELENGKAPNYA ></a>
+                                                        <a href="#" type="button" style="color: darkgoldenrod; text-decoration: none; font-size: 13px;">SELENGKAPNYA ></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-md-12">
+
+                                <div class="mobile col-lg-12 col-md-12">
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2">
                                             <img class="d-flex ms-3" style="height: 100px; width: 100px;" src="asset/berita-2.jpg" alt="">
@@ -238,17 +273,17 @@
                                                         Rabu, 1 Maret 2023
                                                     </p>
                                                 </div>
-                                                <h5 class="mb-1">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
+                                                <h5 class="mb-1" style="font-weight: bold;">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="text mt-0 mb-5">
-                                                        <a href="#" type="button" style="color: darkgoldenrod;">SELENGKAPNYA ></a>
+                                                        <a href="#" type="button" style="color: darkgoldenrod; text-decoration: none; font-size: 13px;">SELENGKAPNYA ></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-md-12">
+                                <div class="mobile col-lg-12 col-md-12">
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2">
                                             <img class="d-flex ms-3" style="height: 100px; width: 100px;" src="asset/berita-2.jpg" alt="">
@@ -260,19 +295,24 @@
                                                         Rabu, 1 Maret 2023
                                                     </p>
                                                 </div>
-                                                <h5 class="mb-1">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
+                                                <h5 class="mb-1" style="font-weight: bold;">Ani Mardhatillah, mahasiswa Teknik Informatika juara 1 Lomba MTQ Kecamatan</h5>
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="text mt-0 mb-5">
-                                                        <a href="#" type="button" style="color: darkgoldenrod;">SELENGKAPNYA ></a>
+                                                        <a href="#" type="button" style="color: darkgoldenrod; text-decoration: none; font-size: 13px;">SELENGKAPNYA ></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-md-12 text-center">
+                                <div class="desktop-btn col-lg-12 col-md-12 text-center">
                                     <button class="bg-dark p-1 w-50 mb-5">
-                                        <a href="#" type="button" style="color: darkgoldenrod;">SELENGKAPNYA ></a>
+                                        <a href="#" type="button" style="color: darkgoldenrod; text-decoration: none;">SELENGKAPNYA ></a>
+                                    </button>
+                                </div>
+                                <div class="mobile-btn col-lg-12 col-md-12 text-center">
+                                    <button class="bg-dark p-1 w-50 mb-5">
+                                        <a href="#" type="button" style="color: darkgoldenrod; text-decoration: none;">LAINNYA ></a>
                                     </button>
                                 </div>
                             </div>
@@ -286,7 +326,7 @@
     <footer class="footer footer-expand-lg bg-black">
         <div class="container text-center" style="color: white;">
             <div class="row align-items-center">
-                <div class="col-md-4 h-50 ">
+                <div class="col-md-4 h-50 d-none d-md-block">
                     <h4 class="mt-4 mb-0" style="font-weight: bold;">KONTAK</h4>
                     <p><br>Gedung C lantai 2
                       <br>Fakultas Teknik Universitas Riau
@@ -303,11 +343,11 @@
                     <h4 class="" style="font-weight: bold;">LINK TERKAIT</h4>
                     <p class="text-start" style="margin-left: 120px;">
                         <img src="Icon/ph_dot-bold.png" alt="">
-                        <a href="https://kemahasiswaan.unri.ac.id/news/category/Beasiswa" type="button" class="text-white">Beasiswa</a><br>
+                        <a href="https://kemahasiswaan.unri.ac.id/news/category/Beasiswa" type="button" class="text-white" style="text-decoration: none;">Beasiswa</a><br>
                         <img src="Icon/ph_dot-bold.png" alt="">
-                        <a href="https://iconeei.id/" type="button" class="text-white">Konferensi International</a><br>
+                        <a href="http://tracer.unri.ac.id/dashboard/tracer" type="button" class="text-white"style="text-decoration: none;" >Konferensi Internasional</a><br>
                         <img src="Icon/ph_dot-bold.png" alt="">
-                        <a href="http://tracer.unri.ac.id/dashboard/tracer" type="button" class="text-white">Tracer Study</a><br>
+                        <a href="http://tracer.unri.ac.id/dashboard/tracer" type="button" class="text-white"style="text-decoration: none;">Tracer Study</a><br>
                     </p>
                 </div>
             </div>
